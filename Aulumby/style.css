@@ -22,24 +22,75 @@ a
 
 #wrapper 
 {
+    position: absolute;
     display: grid;
-    grid-template-columns: 1fr;
-    position: relative;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+    
+    ". logo . . header ."
+    "main main main main main main "
+    
+    
+    ;
 
 }   
 
-
-/******* Header start ******/
 header
 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-area: header;
 }
-
 .logo
 {
-    position: absolute;
+    grid-area: logo;
 }
+main
+{
+    grid-area: main;
+}
+.sec1
+{
+    grid-area: sec1;
+}
+.sec2
+{
+    grid-area: sec2;
+}
+.sec3
+{
+    grid-area: sec3;
+}
+.sec4
+{
+    grid-area: sec4;
+}
+.sec5
+{
+    grid-area: sec5;
+}
+.sec6
+{
+    grid-area: sec6;
+}
+.sec7
+{
+    grid-area: sec7;
+}
+.sec8
+{
+    grid-area: 8;
+}
+aside
+{
+    grid-area: aside;
+}
+article
+{
+    grid-area: article;
+}
+
+
+/******* Header start ******/
 
 .topnav #myLinks 
 {
@@ -78,25 +129,37 @@ height: 50px;
 
 /******* Header slut ******/
 
+/******* Logo start ******/
 
-/******* Slider start ******/
+.toplogo
+{
+    position: relative;
+    top: 145px;
+}
+/******* Logo slut ******/
+
+
+/******* Main start ******/
 
 .slider 
 {
     width: 100%;
-    grid-template-columns: 1fr;
+    
+
 }
 
 .textslider
 {
-    grid-column: 8/12;
-    grid-row: 4/5;
-    margin-top: 50px;
+
+    position: relative;
+    bottom: 930px;
+    right: 250px;
+    
 }
 
 .textslider h2
 {
-    font-size: 65px;
+    font-size: 55px;
     font-family: 'Fjalla One';
     text-align: right;
 }
@@ -106,8 +169,6 @@ height: 50px;
     height: 45px;
     width: 45px;
     background-color: #fff;
-    grid-column: 2;
-    grid-row: 23;
     text-align: right;;
     color: #CC6967; 
     margin-top: 18px;
@@ -118,8 +179,6 @@ height: 50px;
     height: 45px;
     width: 45px;
     background-color: #fff;
-    grid-column: 2;
-    grid-row: 23;
     color: #CC6967; 
     margin-left: 50px;
     margin-top: 18px; 
@@ -143,22 +202,19 @@ height: 50px;
     
 }
 
-.boxslider
-{
+.boxslider {
     color: white;
     background-color: #CC6967;
-    grid-column: 11;
-    grid-row: 7/9;
-    margin-top: 100px;
-    width: 185px;
-    height: 75px;
+    width: 152px;
+    height: 50px;
+    position: relative;
+    bottom: 1020px;
+    left: 1100px;
 }
 
-h3
-{
-    font-size: 20px;
-    margin-left: 30px;
-    margin-top: 25px;
+.boxslider h3 {
+    font-size: 22px;
+    padding: 13px;
 }
 a
 {
